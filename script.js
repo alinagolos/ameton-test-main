@@ -13,18 +13,17 @@ function nextSlide() {
   }
   updateSlidePosition();
 }
-
-document.querySelectorAll('.info__spoiler-header').forEach((el) => {
-  el.addEventListener('click', () => {
+document.querySelectorAll('.info__spoiler-header').forEach(function (el) {
+  el.addEventListener('click', function () {
     let content = el.nextElementSibling;
     if (content.style.maxHeight) {
-      document
-        .querySelectorAll('.info__spoiler-text')
-        .forEach((el) => (el.style.maxHeight = null));
+      document.querySelectorAll('.info__spoiler-text').forEach(function (el) {
+        el.style.maxHeight = null;
+      });
     } else {
-      document
-        .querySelectorAll('.info__spoiler-text')
-        .forEach((el) => (el.style.maxHeight = null));
+      document.querySelectorAll('.info__spoiler-text').forEach(function (el) {
+        el.style.maxHeight = null;
+      });
       content.style.maxHeight = content.scrollHeight + 'px';
     }
   });
