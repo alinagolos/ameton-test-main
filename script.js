@@ -1,8 +1,8 @@
-const slides = document.querySelector('.faq__list');
-const slideWidth = document.querySelector('.faq__item').offsetWidth + 24;
-let currentIndex = 0;
+var slides = document.querySelector('.faq__list');
+var slideWidth = document.querySelector('.faq__item').offsetWidth + 24;
+var currentIndex = 0;
 function updateSlidePosition() {
-  const newPosition = -currentIndex * slideWidth;
+  var newPosition = -currentIndex * slideWidth;
   slides.style.transform = `translateX(${newPosition}px)`;
 }
 function nextSlide() {
@@ -15,7 +15,7 @@ function nextSlide() {
 }
 document.querySelectorAll('.info__spoiler-header').forEach(function (el) {
   el.addEventListener('click', function () {
-    let content = el.nextElementSibling;
+    var content = el.nextElementSibling;
     if (content.style.maxHeight) {
       document.querySelectorAll('.info__spoiler-text').forEach(function (el) {
         el.style.maxHeight = null;
